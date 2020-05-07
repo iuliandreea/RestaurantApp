@@ -1,0 +1,4 @@
+Bill for Order 1
+pasta 15.5
+wine 15.0
+Total: 30

@@ -1,0 +1,11 @@
+/.idea/
+/.settings/
+/bin/.idea/
+/bin/src/main/java/business/
+/bin/src/main/java/data/
+/bin/
+/target/classes/
+/src/main/java/META-INF/
+/src/main/resources/META-INF/
+/.project
+/.classpath
