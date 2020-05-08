@@ -15,9 +15,7 @@ public class WaiterGraphicalUserInterface {
     Restaurant restaurant;
 
     public WaiterGraphicalUserInterface(Restaurant restaurant) {
-
         this.restaurant = restaurant;
-
         addNewOrderButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

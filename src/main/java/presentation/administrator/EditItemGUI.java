@@ -27,10 +27,8 @@ public class EditItemGUI {
     public EditItemGUI(){}
 
     public EditItemGUI(Restaurant restaurant) {
-
         this.res = restaurant;
         controller = new AdminController(this, res);
-
         if(!res.getMenuItemListNames().isEmpty()){
             for(String mi : res.getMenuItemListNames()) {
                 allItemsComboBox.addItem(mi);
@@ -39,11 +37,9 @@ public class EditItemGUI {
             nameAll = allItemsComboBox.getItemAt(0).toString();
             nameAllCP = allItemsCPComboBox.getItemAt(0).toString();
         }
-
         updateBPButton.addActionListener(controller);
         deleteFromCPButton.addActionListener(controller);
         addToCPButton.addActionListener(controller);
-
         allItemsComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {

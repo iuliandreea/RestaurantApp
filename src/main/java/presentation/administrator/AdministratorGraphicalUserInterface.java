@@ -18,10 +18,7 @@ public class AdministratorGraphicalUserInterface {
     public AdministratorGraphicalUserInterface(){}
 
     public AdministratorGraphicalUserInterface(Restaurant restaurant) {
-
         this.restaurant = restaurant;
-
-
         editMenuItemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

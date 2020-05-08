@@ -23,21 +23,17 @@ public class AddOrderGUI {
     public AddOrderGUI(){}
 
     public AddOrderGUI(Restaurant restaurant) {
-
         this.res = restaurant;
         controller = new WaiterController(this, res);
-
         if(!res.getMenuItemListNames().isEmpty()){
             for(String mi : res.getMenuItemListNames()) {
                 itemComboBox.addItem(mi);
             }
             name = itemComboBox.getItemAt(0).toString();
         }
-
         createOrderButton.addActionListener(controller);
         addToOrderButton.addActionListener(controller);
         confirmButton.addActionListener(controller);
-
         itemComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {

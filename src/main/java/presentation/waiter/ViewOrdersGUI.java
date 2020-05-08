@@ -17,21 +17,17 @@ public class ViewOrdersGUI {
     Restaurant res;
 
     public ViewOrdersGUI(Restaurant restaurant){
-
         ordersPanel = new JPanel(new GridBagLayout());
         this.res = restaurant;
-
         String[][] data = {};
         String[] column = {"orderId", "table", "date", "items"};
         DefaultTableModel tableModel = new DefaultTableModel(data, column);
         ordersTable = new JTable(tableModel);
-
         Iterator it = res.getOrderList().entrySet().iterator();
         while(it.hasNext()){
             Map.Entry pair = (Map.Entry)it.next();
             Order order = (Order)pair.getKey();
             List<MenuItem> orderItems = (List<MenuItem>)pair.getValue();
-
             String[] row = new String[4];
             row[0] = String.valueOf(order.getOrderId());
             row[1] = String.valueOf(order.getTable());
@@ -42,9 +38,7 @@ public class ViewOrdersGUI {
             }
             tableModel.addRow(row);
         }
-
         ordersPanel.add(new JScrollPane(ordersTable));
-
     }
 
     public JPanel getOrdersPanel(){

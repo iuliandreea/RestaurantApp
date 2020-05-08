@@ -26,22 +26,18 @@ public class AddItemGUI {
     public AddItemGUI(){}
 
     public AddItemGUI(Restaurant restaurant) {
-
         this.res = restaurant;
         controller = new AdminController(this, res);
-
         if(!res.getMenuItemList().isEmpty()){
             for(String mi : res.getMenuItemListNames()) {
                 listBP.addItem(mi);
             }
             nameCombo = listBP.getItemAt(0).toString();
         }
-
         createBPButton.addActionListener(controller);
         createCPButton.addActionListener(controller);
         addToCPButton.addActionListener(controller);
         confirmButton.addActionListener(controller);
-
         listBP.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {

@@ -11,10 +11,8 @@ public class ChefGraphicalUserInterface extends JFrame implements Observer {
     private JLabel notifLabel;
 
     public ChefGraphicalUserInterface(Restaurant restaurant){
-
         this.res = restaurant;
         restaurant.registerObserver(this);
-
     }
 
     @Override

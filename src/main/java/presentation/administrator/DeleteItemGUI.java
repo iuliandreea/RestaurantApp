@@ -19,9 +19,7 @@ public class DeleteItemGUI {
     public DeleteItemGUI(){}
 
     public DeleteItemGUI(Restaurant restaurant) {
-
-        this.res = restaurant;
-        controller = new AdminController(this, res);
+        this.res = restaurant;controller = new AdminController(this, res);
 
         if(!res.getMenuItemList().isEmpty()){
             for(String mi : res.getMenuItemListNames()) {
@@ -29,9 +27,7 @@ public class DeleteItemGUI {
             }
             itemName = deleteComboBox.getItemAt(0).toString();
         }
-
         deleteButton.addActionListener(controller);
-
         deleteComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {

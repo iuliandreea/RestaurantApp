@@ -21,9 +21,7 @@ public class MainGraphicalUserInterface {
     Restaurant res;
 
     public MainGraphicalUserInterface(Restaurant restaurant, File file) {
-
         this.res = restaurant;
-
         administratorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

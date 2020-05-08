@@ -18,15 +18,12 @@ public class ViewMenuItemsGUI {
     public ViewMenuItemsGUI(){}
 
     public ViewMenuItemsGUI(Restaurant restaurant ){
-
         menuItemsPanel = new JPanel(new GridBagLayout());
         this.res = restaurant;
-
         String[][] data = {};
         String[] column = {"name", "price", "details"};
         DefaultTableModel tableModel = new DefaultTableModel(data, column);
         menuItemsTable = new JTable(tableModel);
-
         for(MenuItem mi : restaurant.getMenuItemList()){
             String[] row = new String[3];
             row[0] = mi.getName();
@@ -42,7 +39,6 @@ public class ViewMenuItemsGUI {
             }
             tableModel.addRow(row);
         }
-
         menuItemsPanel.add(new JScrollPane(menuItemsTable));
     }
 
